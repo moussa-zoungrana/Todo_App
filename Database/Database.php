@@ -6,6 +6,7 @@
         private $dbname;
         private $username;
         private $password;
+        private $pdo;
 
 
         public function __construct( $dbname,$username="root",$password="passroot",$servername="localhost")
@@ -18,21 +19,31 @@
 
         public function connect()
         {
-            try {
-
                 $dns= "mysql:host=$this->servername;dbname=$this->dbname";
-                $conn=new PDO($dns,$this->username,$this->password);
-                $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
-
-                echo "connected susses!";
-        
-            } catch (PDOException $e) {
-                echo "failed connected!"."<br>".$e->getMessage();
-            }
+                $this->pdo=new PDO($dns,$this->username,$this->password);
+                $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+                
 
         }
 
+        public function insert($statement)
+        {
+            if(!isset($this->pdo)){
+                $this->connect();
+            }
+            $this->pdo->exec($statement); 
+        }
 
+        public function recup($statement)
+        {
+            if(!isset($this->pdo)){
+                $this->connect();
+            }
+            $req=$this->pdo->query($statement);
+            $result=$req->fetchAll(PDO::FETCH_OBJ);
+            return $result;
+
+        }
 
 
 
