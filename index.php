@@ -32,10 +32,33 @@ Entrez votre tache : <input type="text" name="todo" >
 
 <?php  $result=$conn->recup("SELECT * FROM todo");  ?>
 
+<?php foreach($result as $post):?>
 
- <pre>
-     <?php  var_dump($result) ?>
- </pre>
+<table>
+<tr>
+<td><?= $post->title ?></td>
+<td><?= $post->date_time ?></td>
+
+
+</tr>
+
+</table>
+
+
+
+<?php endforeach ?>
 
  
+<pre>
+<?//php var_dump($result) ?>
+<?//php var_dump($conn) ?>
+</pre>
 
+
+
+<style>
+table,td{
+    border: 2px solid;
+}
+
+</style>
