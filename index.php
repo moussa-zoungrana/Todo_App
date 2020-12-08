@@ -1,24 +1,15 @@
 <?php 
-require __DIR__.DIRECTORY_SEPARATOR.'Database'.DIRECTORY_SEPARATOR.'Database.php';
-//require __DIR__.DIRECTORY_SEPARATOR.'class'.DIRECTORY_SEPARATOR.'Todo.php';
+require __DIR__.DIRECTORY_SEPARATOR.'class'.DIRECTORY_SEPARATOR.'Todo.php';
 
-//$conn=new Database('todolist');
-//$todo1= new Todo("4e tache");
-//$todo1->ajout_todo();
-//$result=$conn->recup("SELECT * FROM todo");
-$conn=new Database('todolist'); 
-$title =null;
+
+if(isset($_POST['submit']) && !empty($_POST['todo'])){
+    $todo1= new Todo();
+    $todo1->title=$_POST['todo'];
+    $todo1->ajout_todo();
+}
+
+
 ?>
-<?php if(isset($_POST['submit']) && !empty($_POST['todo'])) : ?>
-
-<?php 
-    
-    $title=$_POST['todo'];
-    
-    $conn->insert("INSERT INTO todo (title) VALUES('$title')");  
-?>  
-<?php endif; ?>
-
 
 
 <h1>Todo list</h1>
@@ -30,7 +21,7 @@ Entrez votre tache : <input type="text" name="todo" >
 </form>
 
 
-<?php  $result=$conn->recup("SELECT * FROM todo");  ?>
+<?php  $result= Todo::affich_todo(); ?>
 
 <?php foreach($result as $post):?>
 

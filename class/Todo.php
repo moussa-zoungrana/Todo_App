@@ -3,21 +3,24 @@
 <?php 
 
     class Todo extends Database{
+               public $id;
                public $title;
 
-            public function __construct(string $title)
+            public function __construct(string $title=null)
             {
                 $this->title=$title;
             }
 
             public function ajout_todo()
             {
-                return $this->insert("INSERT INTO todo (title) VALUES ($this->title)");
+                $conn=new Database('todolist'); 
+                $conn->insert("INSERT INTO todo (title) VALUES('$this->title')");  
             }
 
-            public function affich_todo()
+            public static function affich_todo()
             {
-              return  $this->recup("SELECT * FROM todo");
+                $conn=new Database('todolist');
+                return $conn->recup("SELECT * FROM todo");
             }
 
 
