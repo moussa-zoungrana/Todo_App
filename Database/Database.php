@@ -32,6 +32,7 @@
                 $this->connect();
             }
             $this->pdo->exec($statement); 
+            $this->pdo=null;
         }
 
         public function recup($statement)
@@ -41,8 +42,19 @@
             }
             $req=$this->pdo->query($statement);
             $result=$req->fetchAll(PDO::FETCH_OBJ);
+            $this->pdo=null;
             return $result;
 
+        }
+
+        
+        public function delete($statement)
+        {
+            if(!isset($this->pdo)){
+                $this->connect();
+            }
+            $this->pdo->exec($statement); 
+            $this->pdo=null;
         }
 
 

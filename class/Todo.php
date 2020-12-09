@@ -17,14 +17,17 @@
                 $conn->insert("INSERT INTO todo (title) VALUES('$this->title')");  
             }
 
-            public static function affich_todo()
+            public static function recup_todo()
             {
                 $conn=new Database('todolist');
-                return $conn->recup("SELECT * FROM todo");
+                return $conn->recup("SELECT * FROM todo ORDER BY date_time");
             }
 
 
-
+            public function delete_todo(){
+                $conn=new Database('todolist');
+            $conn->delete("DELETE FROM todo WHERE id ={$this->id}");
+            }
     }
 
 
