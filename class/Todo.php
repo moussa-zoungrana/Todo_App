@@ -1,4 +1,4 @@
-<?php require dirname(__DIR__).DIRECTORY_SEPARATOR.'Database'.DIRECTORY_SEPARATOR.'Database.php' ?>
+<?php require __DIR__.DIRECTORY_SEPARATOR.'Database.php' ?>
 
 <?php 
 
