@@ -1,0 +1,45 @@
+body{
+    font-size: 16px;
+    background-color: gray;
+}
+
+.shearch{
+    text-align: center;
+    font-size: 20px;
+    
+
+}
+input{
+    width: 400px;
+    height: 18px;
+}
+h1{
+    text-align: center;
+    background-color: rgb(64, 64, 107);
+}
+table{
+    text-align: center;
+    position: relative;
+    top: 25%;
+    left: 35%;
+    margin: 1px;
+    
+}
+
+td,th{
+    border-style:ridge;
+    background-color: azure;
+}
+
+td a{
+    display:block;
+    width: 45px;
+    height: 30px;
+    background-color: rgb(165, 27, 27);
+    text-decoration: none;
+    text-align: center;
+}
+
+button{
+    background-color: rgb(66, 66, 117);
+}
