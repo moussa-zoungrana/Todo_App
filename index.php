@@ -2,7 +2,7 @@
 <?php //require __DIR__.DIRECTORY_SEPARATOR.'pages'.DIRECTORY_SEPARATOR.'todo_save.php' ?>
 
 
-<h1>Todo list</h1>
+<h1>Todo list app</h1>
 <div class="shearch">
 <form action="pages/todo_save.php" method="post">
 
