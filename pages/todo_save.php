@@ -7,6 +7,11 @@ if(isset($_POST['submit']) && !empty($_POST['todo'])){
     $todo->title=htmlspecialchars( $_POST['todo']);
     $todo->ajout_todo();
 }
-header('location: ../index.php');
+
+//header('location: ../index.php');
+?>
+<pre><?php var_dump($todo);  ?></pre>
+
+
 
 

@@ -5,16 +5,17 @@
     class Todo extends Database{
                public $id;
                public $title;
+               public $getPDO;
 
             public function __construct(string $title=null)
             {
                 $this->title=$title;
+                $this->getPDO=new Database('todolist');
             }
 
             public function ajout_todo()
             {
-                $conn=new Database('todolist'); 
-                $conn->insert("INSERT INTO todo (title) VALUES('$this->title')");  
+                $this->getPDO->insert("INSERT INTO todo (title) VALUES('$this->title')");  
             }
 
             public static function recup_todo()
@@ -25,8 +26,8 @@
 
 
             public function delete_todo(){
-                $conn=new Database('todolist');
-            $conn->delete("DELETE FROM todo WHERE id ={$this->id}");
+                
+                $this->getPDO->delete("DELETE FROM todo WHERE id ={$this->id}");
             }
     }
 
