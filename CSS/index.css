@@ -1,6 +1,7 @@
 body{
     font-size: 16px;
     background-color: gray;
+   
 }
 
 .shearch{
@@ -12,6 +13,8 @@ body{
 input{
     width: 400px;
     height: 18px;
+    border:black solid 2px ;
+
 }
 h1{
     text-align: center;
@@ -55,6 +58,7 @@ td a{
 button{
     background-color:black;
     color:azure;
+    height: 24px;
 }
 
 #lien{
