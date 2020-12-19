@@ -21,8 +21,8 @@ h1{
 
 table{
     text-align: center;
-    position: relative;
-    top: 25%;
+    position: absolute;
+    top: 20%;
     left: 35%;
     margin: 1px;
     
@@ -30,27 +30,36 @@ table{
 
 td{
     border-style:ridge;
+    border-color:black;
     background-color: azure;
 }
 
 th{
     border-style:ridge;
     background-color:black;
+    border-color:black;
     color:azure;
 }
 
 
 td a{
     display:block;
-    width: 45px;
     height: 30px;
     background-color: rgb(165, 27, 27);
     text-decoration: none;
     text-align: center;
     color: black;
+    
 }
 
 button{
     background-color:black;
     color:azure;
+}
+
+#lien{
+    display: block;
+    width: 45px;
+    height: 30px;
+    padding: 0px;
 }
