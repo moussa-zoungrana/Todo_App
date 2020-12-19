@@ -15,8 +15,10 @@ input{
 }
 h1{
     text-align: center;
-    background-color: rgb(64, 64, 107);
+    background-color:black;
+    color:azure;
 }
+
 table{
     text-align: center;
     position: relative;
@@ -26,10 +28,17 @@ table{
     
 }
 
-td,th{
+td{
     border-style:ridge;
     background-color: azure;
 }
+
+th{
+    border-style:ridge;
+    background-color:black;
+    color:azure;
+}
+
 
 td a{
     display:block;
@@ -38,8 +47,10 @@ td a{
     background-color: rgb(165, 27, 27);
     text-decoration: none;
     text-align: center;
+    color: black;
 }
 
 button{
-    background-color: rgb(66, 66, 117);
+    background-color:black;
+    color:azure;
 }
