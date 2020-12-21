@@ -15,8 +15,9 @@
                     <td><?= $post->title ?></td>
                 </div>
                 <td><?= $post->date_time ?></td>
-              <td id="lien"><a href="pages/todo_delete.php?del_todo=<?= $post->id ?>">X</a></td>
+              <td id="lien"><a href="pages/todo_delete.php?del_todo=<?= $post->id ?>"><strong>X</strong> </a></td>
             </tr>
         <?php endforeach ?>
     </table>
 </div>
+
