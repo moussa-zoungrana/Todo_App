@@ -1,4 +1,4 @@
-TODO APP
+TODO APP  v1.0
 
 Todo App est une application de gestion de tache (Todolist) avec les fonctionnalités d'ajout et de suppression de taches.
 
@@ -27,6 +27,6 @@ pointant sur la racine de l'application.
 Cette application sera constamment en évolution, Ceci est juste une première version de test et d'essaie avec des fonctionnalités
 de base.
 
-Application développé par Moussa ZOUNGRANA, fondateur de Lynxeo-Technologies.
-Email : walidzoungrana@yahoo.fr
+Application développée par Moussa ZOUNGRANA, fondateur de Lynxeo-Technologies.
+Email : moussawalidzoungrana@gmail.com
 
