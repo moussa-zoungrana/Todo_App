@@ -22,7 +22,7 @@ php -S localhost:8000 à partir du dossier racine l'application ou creer un virt
 pointant sur la racine de l'application.
 
 
-Cette application sera constamment en évolution, Ceci est juste une première version de test et d'essaie avec des fonctionnalités de base.
+Cette application sera constamment en évolution, Ceci est juste une première version avec des fonctionnalités de base.
 
 Application développée par Moussa ZOUNGRANA, fondateur de Lynxeo-Technologies.
 Email : moussawalidzoungrana@gmail.com
