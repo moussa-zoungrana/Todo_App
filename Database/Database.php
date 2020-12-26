@@ -2,14 +2,14 @@
 
     class Database {
 
-        private $servername;
-        private $dbname;
-        private $username;
-        private $password;
-        private $pdo;
+        protected $servername;
+        protected $dbname;
+        protected $username;
+        protected $password;
+        protected $pdo;
 
 
-        public function __construct( $dbname,$username="root",$password="passroot",$servername="localhost")
+        public function __construct( $dbname,$servername="localhost",$username="root",$password="passroot")
         {
            $this->servername=$servername; 
            $this->dbname=$dbname;
@@ -17,6 +17,7 @@
            $this->password=$password;
         }
 
+       
         public function connect()
         {
                 $dns= "mysql:host=$this->servername;dbname=$this->dbname";

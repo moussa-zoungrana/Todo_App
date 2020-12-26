@@ -5,12 +5,13 @@
     class Todo extends Database{
                private $id;
                private $title;
-               private $getPDO;
+              // private $getPDO;
 
             public function __construct(string $title=null)
             {
                 $this->title=$title;
-                $this->getPDO=new Database('todolist');
+               parent::__construct($dbname="todolist",$servername="localhost",$username="root",$password="passroot");
+              
             }
 
             //Getters
@@ -38,7 +39,7 @@
 
             public function ajout_todo()
             {
-                $this->getPDO->insert("INSERT INTO todo (title) VALUES('$this->title')");  
+                parent::insert("INSERT INTO todo (title) VALUES('$this->title')");  
             }
 
             public static function recup_todo()
@@ -50,7 +51,7 @@
 
             public function delete_todo(){
                 
-                $this->getPDO->delete("DELETE FROM todo WHERE id ={$this->id}");
+                parent::delete("DELETE FROM todo WHERE id ={$this->id}");
             }
     }
 

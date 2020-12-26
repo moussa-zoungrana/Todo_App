@@ -8,7 +8,7 @@ Ensuite, vous avez juste à cloner le dépot sur votre ordinateur a l'aider de g
 
 Après cette étape, il reste juste quelques modifications à faire pour rendre l'application complètement opérationnelle :
 
--Tout d'abord vous devez aller dans le dossier Database, et modifier le fichier Database.php en y modifiant 
+-Tout d'abord vous devez aller dans le dossier Database, et modifier le fichier Database.php et Todo.php en y modifiant 
 les paramètres de la fonction  construct en modifiant le username et le password pour y mettre les votres,
 aussi le servername s'il est différent du votre.
 
