@@ -3,15 +3,38 @@
 <?php 
 
     class Todo extends Database{
-               public $id;
-               public $title;
-               public $getPDO;
+               private $id;
+               private $title;
+               private $getPDO;
 
             public function __construct(string $title=null)
             {
                 $this->title=$title;
                 $this->getPDO=new Database('todolist');
             }
+
+            //Getters
+
+            public function getTitle()
+            {
+                return $this->title;
+            }
+            public function getId(){
+                return $this->id;
+            }
+
+            //Setters
+
+            public function setTitle($title) :void
+            {
+                $this->title=$title;
+            }
+
+            public function setId($id) :void
+            {
+                $this->id=$id;
+            }
+
 
             public function ajout_todo()
             {

@@ -4,7 +4,7 @@
 
     if(isset($_GET['del_todo'])){
         $todo =new Todo();
-        $todo->id=(int)$_GET['del_todo'];
+        $todo->setId((int)$_GET['del_todo']);
         $todo->delete_todo();
         
     }

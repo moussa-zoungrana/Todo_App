@@ -1,5 +1,6 @@
 <?php 
 require __DIR__.DIRECTORY_SEPARATOR.'Database.php';
+// Script for create database and table automatically
 
 $conn=new Database('');
 $conn->connect();
