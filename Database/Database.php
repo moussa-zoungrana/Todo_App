@@ -20,7 +20,7 @@
        
         public function connect()
         {
-                $dns= "mysql:host=$this->servername;dbname=$this->dbname";
+                $dns= "mysql:host=$this->servername;dbname=$this->dbname;charset=utf8";
                 $this->pdo=new PDO($dns,$this->username,$this->password);
                 $this->pdo->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
                 
