@@ -3,6 +3,7 @@
 <?php 
 
     class Todo extends Database{
+
                private $id;
                private $title;
               // private $getPDO;
@@ -39,7 +40,7 @@
 
             public function ajout_todo()
             {
-                parent::insert("INSERT INTO todo (title) VALUES('$this->title')");  
+                $this->insert("INSERT INTO todo (title) VALUES('$this->title')");  
             }
 
             public static function recup_todo()
@@ -51,7 +52,7 @@
 
             public function delete_todo(){
                 
-                parent::delete("DELETE FROM todo WHERE id ={$this->id}");
+                $this->delete("DELETE FROM todo WHERE id ={$this->id}");
             }
     }
 
