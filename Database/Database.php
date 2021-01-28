@@ -9,7 +9,7 @@
         protected $pdo;
 
 
-        public function __construct( $dbname,$servername="localhost",$username="root",$password="passroot")
+        public function __construct( $dbname,$servername="localhost",$username="root",$password="Passroot@2021")
         {
            $this->servername=$servername; 
            $this->dbname=$dbname;

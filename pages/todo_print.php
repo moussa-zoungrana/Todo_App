@@ -7,7 +7,7 @@
         <tr>
     <th>Task</th>
     <th>Date</th>
-    <th>Action</th>
+    <!-- <th>Action</th> -->
         </tr>
         <?php foreach ($result as $post) : ?>
             <tr>
